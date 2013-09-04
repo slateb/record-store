@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+
+        <title>{{ shop.name }} | {{ page_title }}</title>
+
+        {{ 'main.css' | asset_url | stylesheet_tag }}
+        
+        {{ 'custom.modernizr.js' | asset_url | script_tag }}
+
+        <link rel="canonical" href="{{ canonical_url }}">
+
+        {{ content_for_header }}
+    </head>
+
+    <body class="{{ template | replace: '.', ' ' | truncatewords: 1, '' }} antialiased" id="{{ page_title | handle }}">
+                
+        <nav class="top-bar">
+            <ul class="title-area">
+                <li class="name">
+                    <h1><a href="/"><i class="icon-home"></i>{{ shop.name }}</a></h1>
+                </li>
+                <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+            </ul>
+
+            <section class="top-bar-section">
+                <ul class="right">
+                    {% for link in linklists.main-menu.links %}
+                        <li>{{ link.title | link_to: link.url }}</li>
+                    {% endfor %}
+                    <li class="divider"></li>
+                    <li><a href="/cart"><i class="icon-shopping-cart"></i> Cart ({{ cart.item_count}})</a></li>
+                    {% if cart.item_count > 0 %}
+                    <li class="divider"></li>
+                    <li class="has-form"><a class="button" href="/checkout"><i class="icon-credit-card"></i> Check Out</a></li>
+                    {% endif %}
+                </ul 
+            </section>
+
+        </nav>
+        
+        {% if template == 'list-collections' %}
+            {% include 'collection-listing' %}
+        {% else %}
+            {{ content_for_layout }}
+        {% endif %}
+
+        <hr>
+
+        <div class="row">
+            <div class="small-4 columns">
+                <p>© {{ "now" | date: "%Y" }} {{ shop.name }}.</p>
+            </div>
+
+            <div class="small-8 columns">
+                {% if linklists.footer.links.size > 0 %}
+                    <ul class="inline-list right">
+                        {% for link in linklists.footer.links %}
+                            <li><a href="{{ link.url }}" title="{{ link.title | strip_html }}">{{ link.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+        </div>
+
+        <script>
+            document.write('<script src=' + ('__proto__' in {} ? '{{ 'zepto.js' | asset_url }}' : '{{ 'jquery.js' | asset_url }}') + '><\/script>');
+        </script>
+
+        {{ 'main.js' | asset_url | script_tag }}
+
+        <script>
+            $(document).foundation();
+        </script>
+
+    </body>
+</html>

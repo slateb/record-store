@@ -1,0 +1,27 @@
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+@import "compass/css3";
+
+// Foundation Settings
+@import "settings";
+
+// Normalize
+@import "foundation/scss/normalize";
+
+// Foundation
+@import "foundation/scss/foundation";
+
+// Font Awesome
+@import "font-awesome/sass/font-awesome.scss";
+
+
+// remove bottom margin on form elements used within tables (for cart page)
+table {
+
+	input[type],
+	button,
+	.button {
+		margin-bottom: 0;
+	}
+}
