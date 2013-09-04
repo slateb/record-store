@@ -1,0 +1,71 @@
+#record-store{
+	background: url(../images/bg.png);
+}
+
+div.hitrecord.small{
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
+	text-transform: uppercase;
+	display: inline-block;
+	padding-top: 3px;
+	
+	.red{
+		color: $red;
+	}
+
+	.hit-button{
+		height: 17px;
+		width: 17px;
+		display: inline-block;
+		background: $red;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+		vertical-align:baseline;
+		position: relative;
+		top: 1px;
+	}
+
+}
+
+h2.hit-it{
+	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-size: 33px;
+	font-weight: bold;
+	color: #59687f;
+	.red{
+		color: $red;
+	}
+	.hit-button{
+		height: 28px;
+		width: 28px;
+		display: inline-block;
+		background: red;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+		vertical-align: baseline;
+		position: relative;
+		top: 2px;
+		margin-left: 2px;
+	}
+}
+
+#record-store{
+	h2{
+		font-size: 33px;
+		text-transform: uppercase;
+	}
+	h6, h4{
+		text-transform: uppercase;
+	}
+	h4{
+		font-size: 24px;
+	}
+}
+
+.you-may-like{
+	padding-top: 2em;
+	padding-bottom: 4em;
+}

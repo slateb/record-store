@@ -1,0 +1,51 @@
+#record-store{
+.product-card{
+	background: white;
+	padding: 13px;
+	border-radius: 10px;
+	min-height: 320px;
+	min-width: 220px;
+	-webkit-transition: background 0.5s;
+	-moz-transition: background 0.5s;
+	-ms-transition: background 0.5s;
+	-o-transition: background 0.5s;
+	transition: background 0.5s;
+	&:hover{
+			background: #f1efeb;
+		}
+	img{
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.row{
+		margin-top: 13px;
+		h4{
+			text-transform: none;
+			line-height: 1.2;
+		}
+		h2.price{
+			text-align: right;
+			margin-top: 0;
+			color: $darkblue;
+		}
+	}
+}
+
+.sale .product-card{
+	h2.price{
+		background: url(../images/sale-x.png) no-repeat;
+		width: 44px;
+		display: block;
+		text-align: center;
+		padding-right: 9px;
+		margin-left: -5px;
+	}
+	h2.sale-price{
+		color: $red;
+		margin-left: -4px;
+		margin-top: -15px;
+	}
+}
+
+}

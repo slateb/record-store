@@ -1,0 +1,49 @@
+.top-header{
+	background: $blue;
+	min-height: 30px;
+
+	a{
+		color: $grey;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	a.ss-facebook, a.ss-twitter{
+		vertical-align: middle;
+		&:before{
+			margin-right: 12px;
+		}
+	}
+
+	a.gz-mail, a.gz-info, a.gz-cart{
+		&:before{
+		font-size: 18px;
+		position: relative;
+		top: 4px;
+	}
+	}
+
+	.large-3{
+		ul.inline-list{
+			padding-top: 7px;
+		}
+	}
+}
+
+
+.main-nav{
+background: $darkblue;
+.row{
+padding-top: 2em;
+padding-bottom: 1em;
+a{
+	color: #59687f;
+}
+
+.inline-list li:nth-child(n+2) {
+padding-left: 3em;
+padding-top: 10px;
+}
+
+}
+}

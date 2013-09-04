@@ -1,0 +1,38 @@
+#record-store{
+footer {
+	background: #000033;
+	padding-top: 2em;
+	padding-bottom: 1em;
+	a{
+		color: $lightblue;
+		font-size: 13.37px;
+		text-transform: uppercase;
+		&:hover{
+			color: lighten($lightblue, 15%);
+		}
+	}
+	.x{
+		color:$red;
+	}
+}
+
+footer.copyright{
+	background: #09173a;
+	padding-top: 0.7em;
+	padding-bottom: 0em;
+	p{
+		color: $lightblue;
+		text-transform: uppercase;
+	}
+	a{
+		color: $lightblue;
+		&:hover{
+			color: lighten($lightblue, 15%);
+		}
+	}
+	.terms-policy{
+		float: right;
+	}
+}
+
+}
